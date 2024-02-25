@@ -1,0 +1,55 @@
+                            Write a blog on Difference between HTTP1.1 vs HTTP2
+
+         In the web development and internet protocols,the HTTP plays a pivotal role in facilitating communication between clients 
+         and servers. Over time, HTTP has evolved to meet the increasing demands of the modern web, leading to the emergence of newer versions.
+        
+                            HTTP stands for HyperText Transfer protocol
+    The differences between these two protocols in order to gain a better understanding of how they affect user experience and web development.                        
+    
+                *Multiplexing and Concurrent Requests
+                *Header Compression:
+                *Server Push
+                *Binary Protocol
+                *Connection Management 
+
+          *Multiple Requests and Multiplexing:
+
+HTTP/1.1: Only one request may be transmitted on a connection at a time under the HTTP/1.1 protocol. This restriction frequently results in inefficiencies 
+because requests must be queued and handled sequentially, especially on high-latency connections.
+HTTP/2: Multiplexing is a feature of HTTP/2 that enables the simultaneous sending and receiving of many requests and answers over a single connection. 
+This function greatly lowers latency and speeds up page loads overall, particularly for intricate websites with plenty of resources.  
+
+          *Header Compression:
+
+HTTP/1.1: Each request and response in HTTP/1.1 includes headers that contain metadata about the data being transmitted. These headers are often verbose and repetitive, 
+leading to unnecessary overhead, especially when transferring small payloads.
+HTTP/2: HTTP/2 employs header compression techniques such as HPACK, which efficiently compresses headers, reducing the amount of data transmitted over the network.
+ This optimization results in faster page loads and reduced bandwidth consumption, particularly beneficial for mobile users and those on constrained networks.
+
+         *server Push:
+
+HTTP/1.1: To improve page load times, web developers frequently use methods like inlining or concatenating resources. Nevertheless, managing these techniques can be difficult and ineffective.
+HTTP/2: This version of HTTP adds server push, which allows servers to forward resources to clients in advance of requests. Server push improves user experience by reducing round trips and 
+speeding up page rendering by anticipating the demands of the client.
+
+         *Binary Protocol:
+
+HTTP/1.1: Textual representations, which can be human-readable but are inefficient to parse and process, are the foundation of HTTP/1.1's data exchange protocol.
+HTTP/2: HTTP/2 uses a binary protocol, which is easier for computers to understand and handle. This simplified format speeds up communication between clients and servers by lowering parsing overhead.
+
+        *Connection Management:
+
+HTTP/1.1: In HTTP/1.1, establishing and managing multiple connections to accommodate concurrent requests can be resource-intensive, especially for secure connections (HTTPS), due to the overhead of TLS handshake.
+HTTP/2: HTTP/2 uses a single, multiplexed connection per origin, reducing the overhead associated with connection establishment and TLS handshake. 
+This consolidation of connections simplifies resource allocation and management, resulting in improved scalability and resource utilization.
+
+        *Conclusion:
+                     The simple meaning of HyperText Transfer Protocol is a set of rules,for an example if we search anything in google it gives immedaite information by the help of HTTP.
+  It is the protocol used to transfer data over the web. It has an client server,by the help of client server HTTP works.It is also called as language.
+
+
+                                    client ---------- Network---------- Server 
+                                       |                |                  |
+                                              
+                                       |                |                  |
+                                    Browser        Internet             web server
